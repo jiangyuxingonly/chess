@@ -26,7 +26,7 @@ $(function () {
                 $(this).addClass('black')
                 flag = !flag;
                 if (isSuccess(black, coords) >= 5) {
-                    console.log('黑色赢了');
+                    alert('黑色赢了');
                     box.off('click')
                 }
                 if (ai) {
@@ -35,7 +35,7 @@ $(function () {
                     delete blank[pos]
                     $('#' + pos).addClass('white')
                     if (isSuccess(white, pos) >= 5) {
-                        console.log('白色赢了');
+                        alert('白色赢了');
                         box.off('click')
                     }
                     flag = !flag;
